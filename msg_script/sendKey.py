@@ -9,16 +9,20 @@ import pyautogui
 # from multiprocessing import Process
 
 
-def key_press():
+def key_press(input_key):
 
-    msg = pyautogui.typewrite
-    send_msg = pyautogui.keyDown
-    for i in range(8):
-        # time.sleep(1) # delays for 1 seconds
-        msg("This is a msg-sending script, msg number: " + str(i + 1))
-        send_msg("Enter")
+    filename = "logger.txt"
+    with open(filename, "a+") as file:
+        file.write(str(input_key))
+
+    # msg = pyautogui.typewrite
+    # send_msg = pyautogui.keyDown
+    # for i in range(15):
+    #     msg("Trololololo number: " + str(i + 1))
+    #     send_msg("Enter")
 #
 # if __name__ == '__main__':
 #         p = Process(target=key_press)
 #         p.start()
 #         p.join()
+

